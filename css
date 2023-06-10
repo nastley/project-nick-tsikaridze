@@ -1,0 +1,406 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(52, 70, 81);
+    color:beige;
+    text-shadow: 1 -0-.55x rgba(195, 195, 180, 0.6);
+    font-family: 'Work Sans', sans-serif;
+    
+
+
+}
+
+
+
+
+h1{
+    font-size: 5rem;
+}
+
+
+.thewords{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 25%;
+    left: 50%;
+    text-align: center;
+}
+#theWord{
+    margin-top: 50px;
+    font-size: 4rem;
+}
+
+.wrongright{
+    position: absolute;
+    margin: 40px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+.wrongright > div{
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.configs{
+    background-color: rgb(calc(52/1.5), calc(70/1.5), 60);
+    height: 100vh;
+    width: 11vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    box-shadow: 25px 0px 90px 3px rgb(calc(52/1.25), calc(70/1.25), calc(81/1.25)) ;
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 10;
+
+}
+.configs-r{
+    background-color: rgb(calc(52/1.5), calc(70/1.5), 60);
+    height: 100vh;
+    width: 11vw;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    box-shadow: -25px 0px 90px 2px rgb(calc(52/1.25), calc(70/1.25), calc(81/1.25)) ;
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 11;
+    
+}
+.section-div{
+    background-color: rgb(calc(52/1.75), calc(70/1.75),calc(81/1.75));
+    height: 100vh;
+    width: 1vw;
+
+}
+.section-div-r{
+    background-color: rgb(calc(52/1.75), calc(70/1.75),calc(81/1.75));
+    height: 100vh;
+    width: 1vw;
+    margin-left: auto;
+}
+
+
+ 
+.wrongright > div{
+    display: none;
+    padding: 40px;
+    position: absolute;
+    top:50% ;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: max-content;
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+.wrongright > div > P >i{
+
+
+    font-size: 4rem;
+
+
+}
+
+.wrongright > #warning > p{
+    color: red;
+    font-family: monospace;
+    text-shadow: 2px -1px rgba(150,0,0, 0.6);
+}
+
+
+.guessandgen > *{
+    margin: 0px 30px;
+}   
+
+#generate{
+    /* margin: 20px 0px 240px 0px; */
+    border-radius: 30px 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+}
+
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+input{
+    border: rgba(26, 35, 41, 0.2) 3px solid;
+    background-color: rgba(26, 35, 41, 0.85);
+    color:gainsboro;
+    text-shadow: 2px 0px rgba(170, 170, 170, 0.6);
+    text-decoration: none;
+    padding: 16px 48px;
+    border-radius: 20px 40px;
+    height: 80px;
+    width: 800px;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+
+.guessandgen{
+  max-height: fit-content;
+  min-width: fit-content;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 65%;
+  left: 50%;
+}
+
+
+.guessandgen>button{
+    background-color: rgb(187, 86, 42);
+    color:black;
+    border: 4px inherit solid;
+    box-shadow: none;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 3rem;
+}
+
+#guess{
+    border-radius: 15px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+/* ul{
+    list-style-type: disc;
+    margin-left: 32px;
+    font-size: 2rem;
+    width: 9vw;
+    overflow-wrap:break-word;
+} */
+
+section > .section-div > p {
+    width: 9vw;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 40%;
+    left: 13%;
+}
+
+section >.section-div-r > p {
+    width: 9vw;
+
+    font-size: 1.5rem;
+    position: absolute;
+    top: 40%;
+    right: 13% ;
+    text-align: center;
+}
+
+section > div > button{
+
+    position: absolute;
+    top: 50%;
+    outline: none;
+    background-color: rgba(calc(52/0.85), calc(70/0.85),calc(81/0.85), 0) ;
+    height: 9vh;
+    width: 3vw;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 150%;
+}
+
+#leftbutton{
+    border-radius: 10% 30% 30% 10%;
+    left: 40%;
+    transition:ease-out 1.6s all;
+}
+
+#rightbutton{
+    border-radius: 30% 10% 10% 30% ;
+    right: 40%;
+    transition:ease-out 1.6s all;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#hint{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    white-space: pre;
+    font-size: 2.2rem;
+    text-align: center;
+    transition: all 2s ;
+    z-index: -1;
+}
+
+#counter{
+    position: absolute;
+    top: 75%;
+    right: 15%;
+    white-space: pre;
+    font-size: 2.2rem;
+    text-align: center;
+    transition: all 2s ;
+    z-index: -1;
+    width: fit-content;
+}
+
+#wincounter{
+    position: absolute;
+    bottom: 75%;
+    right: 15%;
+    white-space: pre;
+    font-size: 2.2rem;
+    text-align: center;
+    transition: all 2s ;
+    z-index: -1;
+    width: fit-content;
+}
+
+
+
+.openwindow{
+    width: 85vw;
+    height: 100%;
+    z-index: 100;
+
+}
+
+.movearrow{
+    left: 90% !important;
+}
+.movearrow-r{
+    right: 90% !important;
+}
+
+.configs-r > h3{
+    
+    
+    
+    
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+
+
+
+.setting1{
+    position: absolute;
+    top: 15%;
+    left: 42.5%;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 20vw;
+    
+}
+
+.setting2{
+    position: absolute;
+    top: 60%;
+    left: 7.75%;
+    font-size: 3rem;
+    text-align: center;
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+
+
+
+}
+
+.setting3{
+    position: absolute;
+    top: 60%;
+    left: 37.5%;
+    text-align: center;
+    font-size: 3rem;
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+
+
+
+
+
+
+}
+
+.setting4{
+    position: absolute;
+    top: 60%;
+    left: 67.25%;
+    text-align: center;
+    font-size: 3rem;
+    height: 30vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+
+
+
+}
+
+.setting2 > #difficultysetting{
+    width: 15vw;
+    padding: 0px 10px;
+
+
+}
+
+.setting2 > h4{
+    font-size: 3rem;
+
+}
