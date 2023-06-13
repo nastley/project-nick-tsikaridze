@@ -45,7 +45,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 75%;
+    top: calc(25% + 50px);
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: -1;
@@ -147,7 +147,7 @@ align-items: center;
     display: none !important;
 }
 
-input{
+#input{
     border: rgba(26, 35, 41, 0.2) 3px solid;
     background-color: rgba(26, 35, 41, 0.85);
     color:gainsboro;
@@ -169,6 +169,10 @@ input{
   transform: translate(-50%,-50%);
   top: 65%;
   left: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -240,6 +244,7 @@ section > div > button{
     border-radius: 30% 10% 10% 30% ;
     right: 40%;
     transition:ease-out 1.6s all;
+    z-index: 10;
 }
 
 button{
@@ -250,37 +255,40 @@ button{
 
 #hint{
     position: absolute;
-    top: 75%;
-    left: 15%;
+    top: 80%;
+    left: 25%;
     white-space: pre;
     font-size: 2.2rem;
     text-align: center;
     transition: all 2s ;
     z-index: -1;
+    transform: translate(-50%,-50%);
 }
 
 #counter{
     position: absolute;
-    top: 75%;
-    right: 15%;
+    top: 80%;
+    left: 75%;
     white-space: pre;
     font-size: 2.2rem;
     text-align: center;
     transition: all 2s ;
     z-index: -1;
     width: fit-content;
+    transform: translate(-50%,-50%);
 }
 
 #wincounter{
     position: absolute;
-    bottom: 75%;
-    right: 15%;
+    top: 80%;
+    left: 50%;
     white-space: pre;
     font-size: 2.2rem;
     text-align: center;
     transition: all 2s ;
     z-index: -1;
     width: fit-content;
+    transform: translate(-50%,-50%);
 }
 
 
@@ -318,7 +326,7 @@ button{
 
 .setting1{
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 42.5%;
     text-align: center;
     font-size: 3rem;
@@ -332,11 +340,11 @@ button{
 
 .setting2{
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 7.75%;
     font-size: 3rem;
     text-align: center;
-    height: 20vh;
+    height: 35vh;
     width: 20vw;
     display: flex;
     align-items: center;
@@ -352,11 +360,11 @@ button{
 
 .setting3{
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 37.5%;
     text-align: center;
     font-size: 3rem;
-    height: 20vh;
+    height: 35vh;
     width: 20vw;
     display: flex;
     align-items: center;
@@ -375,11 +383,11 @@ button{
 
 .setting4{
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 67.25%;
     text-align: center;
     font-size: 3rem;
-    height: 30vh;
+    height: 35vh;
     width: 20vw;
     display: flex;
     align-items: center;
@@ -393,10 +401,18 @@ button{
 
 }
 
+
+.setting2 > #difficultysetting > *{
+    gap: 0px 0px 5px 0px;
+
+    
+
+}
+
 .setting2 > #difficultysetting{
     width: 15vw;
-    padding: 0px 10px;
 
+    
 
 }
 
@@ -404,3 +420,166 @@ button{
     font-size: 3rem;
 
 }
+
+
+.textcont-r > .setting1{
+    position: absolute;
+    top: 25%;
+    left: 42.5%;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 20vw;
+    
+}
+
+.textcont-r > .setting2{
+    position: absolute;
+    top: 45%;
+    left: 7.75%;
+    font-size: 3rem;
+    text-align: center;
+    height: 35vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+
+
+
+}
+
+.textcont-r > .setting3{
+    position: absolute;
+    top: 45%;
+    left: 37.5%;
+    text-align: center;
+    font-size: 3rem;
+    height: 35vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+
+
+
+
+
+
+}
+
+.textcont-r > .setting4{
+    position: absolute;
+    top: 45%;
+    left: 67.25%;
+    text-align: center;
+    font-size: 3rem;
+    height: 35vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+
+
+
+}
+
+.textcont-r > .setting3 > input{
+
+    height: 75px;
+    width: 75px;
+
+
+}
+.textcont-r > .setting4 > input{
+
+
+height: 75px;
+width: 75px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width: 1920px) {
+
+    body{background-color: blue;}
+
+
+
+
+
+
+  }
+
+
+  @media only screen and (max-width: 1919px) {
+
+
+    body{background-color: red;}
+    
+
+
+
+
+
+  }
+
+  @media only screen and (max-height: 1080px) {
+
+
+    .section-div{background-color: aqua;}
+
+
+
+
+
+  } */
+
+  @media only screen and (max-height: 1079px) {
+
+
+    .section-div{background-color: maroon;}
+
+    #leftbutton{
+
+
+        top: 60%;
+
+    }
+    #rightbutton{
+
+        top: 60%;
+
+
+    }
+
+
+
+  }
+
