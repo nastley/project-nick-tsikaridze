@@ -23,6 +23,7 @@ var checkboxhTF = false;
 var checkboxinTF = true;
 var hintletters = "";
 var wincounter = 0;
+var hintlettercounter = -1;
 const guessbutton = document.querySelector("#guess");
 
 
@@ -41,6 +42,9 @@ document.getElementById("wrongguesscheck").addEventListener("click", updatewrong
 
 
 function generateButtonClicked () {
+
+
+
   
   document.getElementById("input").value = ""
 
@@ -52,7 +56,7 @@ function generateButtonClicked () {
 
   scramble(orderedletters,currentword);
 
-  document.querySelector("#theWord").innerHTML = `Your Word Is: "${scrambledcombined}"`;
+  document.querySelector(".thewords > h1").innerHTML = `Your Word Is: "${scrambledcombined}"`;
   
   guessedword = ""
 
@@ -273,10 +277,17 @@ ${wincounter}`
           document.getElementById("none").classList.remove("show")
           document.getElementById("warning").classList.remove("show")
           incorrectguesses = incorrectguesses + 1;
+          
+          if(checkboxhTF === true){
+            hintlettercounter = hintlettercounter + 1
+          }
 
+
+
+          if (checkboxhTF === true){
           if (hintletters.length < currentword.length){
-          hintletters = hintletters + orderedstring[incorrectguesses-1]
-          document.getElementById("hint").innerText = `"${hintletters}"`}
+          hintletters = hintletters + orderedstring[hintlettercounter]
+          document.getElementById("hint").innerText = `"${hintletters}"`}}
 
 
           
@@ -329,6 +340,9 @@ var clickedright = false
     document.querySelector(`.textcont  :nth-child(3)`).classList.add("setting3")
     document.querySelector(`.textcont  :nth-child(4)`).classList.add("setting4")
 }, 900);
+
+//if the user clicks the button before it reaches the end it does bug out but its very hard and can be fixed buy clicking the button again so i didnt bother fixing it
+
 
 
 
